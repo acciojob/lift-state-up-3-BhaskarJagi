@@ -18,11 +18,15 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="parent">
         <h1>Parent Component</h1>
-        <Child child={child1} setSelected={setSelected}/>
-        <Child child={child2} setSelected={setSelected}/>
-        <p>Selected option: {selected}</p>
+        <div className="child1">
+          <Child child={child1} setSelected={setSelected}/>
+        </div>
+        <div className="child2">
+          <Child child={child2} setSelected={setSelected}/>
+        </div>
+        <p>Selected Option: {selected}</p>
     </div>
   )
 }
